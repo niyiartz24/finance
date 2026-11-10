@@ -39,6 +39,7 @@ import Transactions from './Transactions'
 import Budgets from './Budgets'
 import IncomeExpenses from './IncomeExpenses'
 import Projects from './Projects'
+import Invoices from './Invoices'
 
 type MetricProps = {
   label: string
@@ -470,7 +471,11 @@ function Dashboard() {
   <div className="mx-auto max-w-[1600px] px-4 py-7 sm:px-7 sm:py-9 lg:px-10">
     <Projects />
   </div>
-) : activePage === 'Budgets' ? (<Budgets />) :activePage === 'Overview' ? (
+) : activePage === 'Invoices' ? (
+  <div className="mx-auto max-w-[1600px] px-4 py-7 sm:px-7 sm:py-9 lg:px-10">
+    <Invoices />
+  </div>
+)   : activePage === 'Budgets' ? (<Budgets />) :activePage === 'Overview' ? (
   <div className="mx-auto max-w-[1600px] px-4 py-7 sm:px-7 sm:py-9 lg:px-10">
           <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
